@@ -1,0 +1,26 @@
+<div>
+
+  <h1>Register</h1>
+
+  <fieldset>
+    <legend><span class="number">1</span>Your basic info</legend>
+    <label for="name">Name:</label>
+    <input [(ngModel)]="user.name" type="text" id="name" >
+
+    <label for="mail">Email:</label>
+    <input [(ngModel)]="user.email" type="email" id="mail" >
+
+    <label for="password">Password:</label>
+    <input [(ngModel)]="user.password" type="password" id="password" >
+    <label  for="cpassword">Confirme Password:</label>
+    <input [(ngModel)]="cfpassword" type="password" id="cpassword" >
+    <label for="telephone">Telephone:</label>
+    <input [(ngModel)]="user.tele" type="text" id="telephone" >
+
+  </fieldset>
+
+
+
+  <button (click)="CreateUser()">Sign Up</button>
+
+</div>
