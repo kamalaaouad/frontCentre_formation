@@ -12,4 +12,8 @@ export class UserService {
     console.log(user);
     return this.http.post<Users>(`${this.appUrl}/create`,user);
   }
+  public userIsExiste(user: Users): Observable<any>{
+    console.log(user);
+    return this.http.post<Users>(`${this.appUrl}/verified`,user) ;
+  }
 }

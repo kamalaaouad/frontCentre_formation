@@ -13,7 +13,6 @@ export class RegisterComponent implements OnInit {
     name:"",
     email:"",
     password:"",
-    //cfpassword:"",
     tele : " ",
     role:"user"
   }
