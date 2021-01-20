@@ -12,6 +12,7 @@ import { LayoutClientComponent } from './components/layout-client/layout-client.
 import { RegisterComponent } from './components/register/register.component';
 import { FormsModule } from '@angular/forms';
 import { HttpClient, HttpClientModule, HttpHandler } from '@angular/common/http';
+import { AdminComponent } from './components/admin/admin.component';
 
 @NgModule({
   declarations: [
@@ -23,7 +24,8 @@ import { HttpClient, HttpClientModule, HttpHandler } from '@angular/common/http'
     LoginComponentComponent,
     ContactComponent,
     LayoutClientComponent,
-    RegisterComponent
+    RegisterComponent,
+    AdminComponent
   ],
   imports: [
     BrowserModule,

@@ -6,10 +6,16 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./navbar.component.css']
 })
 export class NavbarComponent implements OnInit {
-
-  constructor() { }
+  isStudent:boolean ;
+  isAdmin:boolean ;
+  constructor() {
+    this.isStudent =Boolean(localStorage.getItem('isEtudiant'));
+    this.isAdmin = Boolean(localStorage.getItem('isAdmin'));
+    //location.reload(true);
+  }
 
   ngOnInit(): void {
+    //location.reload(true);
   }
 
 }

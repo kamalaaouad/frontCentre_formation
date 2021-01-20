@@ -1,4 +1,5 @@
  <!-- ======= Header ======= -->
+
  <header id="header" class="header-dark">
   <div class="container">
 
@@ -11,11 +12,11 @@
     <nav id="nav-menu-container">
       <ul class="nav-menu">
         <li class="menu-active"><a href="index.html">Home</a></li>
-        <li><a href="#about">About Us</a></li>
-        <li><a href="#services">Services</a></li>
-        <li><a href="#portfolio">Portfolio</a></li>
-        <li><a href="#team">Team</a></li>
-        <li class="menu-has-children"><a href="">Drop Down</a>
+        <li><a href="#about" *ngIf="isStudent">About Us</a></li>
+        <li><a href="#services" *ngIf="isStudent">Services</a></li>
+        <li><a href="#portfolio" *ngIf="isStudent">Portfolio</a></li>
+        <li><a href="#team" *ngIf="isStudent">Team</a></li>
+        <li class="menu-has-children" *ngIf="isStudent"><a href="">Drop Down</a>
           <ul>
             <li><a href="#">Drop Down 1</a></li>
             <li class="menu-has-children"><a href="#">Drop Down 2</a>
@@ -32,9 +33,15 @@
             <li><a href="#">Drop Down 5</a></li>
           </ul>
         </li>
-        <li><a routerLink="contact">Contact Us</a></li>
-        <li><a routerLink="register">Register</a></li>
-        <li><a routerLink="login">Login</a></li>
+        <li *ngIf="isStudent"><a routerLink="contact">Contact Us</a></li>
+        <li *ngIf="isStudent"><a routerLink="register">Register</a></li>
+        <li *ngIf="isStudent"><a routerLink="login">Login</a></li>
+
+        <li><a href="#about" *ngIf="isAdmin">Gestion Formation</a></li>
+        <li><a href="#services" *ngIf="isAdmin">List Formation</a></li>
+        <li><a href="#portfolio" *ngIf="isAdmin">Statistic</a></li>
+        <li><a href="#team" *ngIf="isAdmin">Calalogue de Formation</a></li>
+        <li *ngIf="isAdmin"><a routerLink="contact">List des Etudiants</a></li>
       </ul>
     </nav><!-- #nav-menu-container -->
   </div>

@@ -7,4 +7,11 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'app';
+            isStudent:boolean =Boolean(localStorage.getItem('isEtudiant'));
+            isAdmin:boolean = Boolean(localStorage.getItem('isAdmin'));
+
+  ngOnInit(): void {
+   console.log(this.isAdmin);
+   console.log(this.isStudent);
+  }
 }

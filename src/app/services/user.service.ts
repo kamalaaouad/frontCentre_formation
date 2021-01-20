@@ -13,7 +13,7 @@ export class UserService {
     return this.http.post<Users>(`${this.appUrl}/create`,user);
   }
   public userIsExiste(user: Users): Observable<any>{
-    console.log(user);
+    //console.log(user);
     return this.http.post<Users>(`${this.appUrl}/verified`,user) ;
   }
 }
